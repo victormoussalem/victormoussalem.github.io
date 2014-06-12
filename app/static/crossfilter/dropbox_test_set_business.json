@@ -1,0 +1,17 @@
+[
+{"city": "Santa Clara, CA", "business_id": "0", "name": "MobileSpan", "date": "2014", "founder_education": "Stanford", "Categories": "Enterprise Software", "Amount": "0"},
+{"city": "San Francisco, CA", "business_id": "1", "name": "Droptalk", "date": "2014", "founder_education": "Indian Institute of Technology", "Categories": "Messaging", "Amount": "0"},
+{"city": "San Francisco, CA", "business_id": "2", "name": "Bubbli", "date": "2014", "founder_education": "Stanford", "Categories": "Photo", "Amount": "0"},
+{"city": "San Francisco, CA", "business_id": "3", "name": "HackPad", "date": "2014", "founder_education": "University of Illinois, Urbana Champaign", "Categories": "Services, Software", "Amount": "0"},
+{"city": "San Francisco, CA", "business_id": "4", "name": "Loom", "date": "2014", "founder_education": "Carnegie Mellon", "Categories": "Flash Storage, Synchronization, Video, Photography, Storage, Cloud Computing, Mobile, Web Hosting", "Amount": "0"},
+{"city": "Berlin, Germany", "business_id": "5", "name": "Readmill", "date": "2014", "founder_education": "KTH Royal Institute of Technology", "Categories": "Social Media, iPad, Reviews and Recommendations, Consumers, Textbooks, Mobile", "Amount": "0"},
+{"city": "Cambridge, MA", "business_id": "6", "name": "Zulip", "date": "2014", "founder_education": "MIT", "Categories": "Messaging, Enterprise Software", "Amount": "0"},
+{"city": "Boston, MA", "business_id": "7", "name": "Sold", "date": "2013", "founder_education": "MIT", "Categories": "Apps, Mobile, Analytics", "Amount": "0"},
+{"city": "Palo Alto, CA", "business_id": "8", "name": "Foundry Hiring", "date": "2013", "founder_education": "Stanford", "Categories": "Software", "Amount": "0"},
+{"city": "San Mateo, CA", "business_id": "9", "name": "Endorse", "date": "2013", "founder_education": "University of Illinois, Urbana Champaign", "Categories": "Shopping, Brand Marketing, Coupons, Loyalty Programs, Mobile", "Amount": "0"},
+{"city": "San Francisco, CA", "business_id": "10", "name": "TapEngage", "date": "2013", "founder_education": "University of Waterloo", "Categories": "Advertising", "Amount": "0"},
+{"city": "San Francisco, CA", "business_id": "11", "name": "Mailbox", "date": "2013", "founder_education": "Stanford", "Categories": "Task Management, Productivity Software, iPhone, Email, Messaging", "Amount": "100000000"},
+{"city": "Boulder, CO", "business_id": "12", "name": "SnapJoy", "date": "2012", "founder_education": "Purdue", "Categories": "Curated Web", "Amount": "0"},
+{"city": "Bellevue, WA", "business_id": "13", "name": "Audiogalaxy", "date": "2012", "founder_education": "The University of Texas, Austin", "Categories": "Video Streaming, Music, Games", "Amount": "0"},
+{"city": "San Francisco, CA", "business_id": "14", "name": "Cove", "date": "2012", "founder_education": "Carnegie Mellon", "Categories": "Enterprise Software", "Amount": "0"}
+]
