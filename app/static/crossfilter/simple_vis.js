@@ -23,6 +23,7 @@ var volumeChart = dc.barChart("#dc-volume-chart");
 var lineChart = dc.lineChart("#dc-line-chart");
 var dataTable = dc.dataTable("#dc-table-graph");
 var rowChart = dc.rowChart("#dc-row-graph");
+var other_rowChart = dc.rowChart("#dc-other-row-graph");
  
 /********************************************************
 *                                                       *
@@ -39,7 +40,9 @@ var ndx = crossfilter(yelp_data);
  
     // for volumechart
     var cityDimension = ndx.dimension(function (d) { return d.city; });
+    var educationDimension = ndx.dimension(function (d) { return d.founder_education; });
     var cityGroup = cityDimension.group();
+    var educationGroup = educationDimension.group();
     var cityDimensionGroup = cityDimension.group().reduce(
         //add
         function(p,v){
@@ -187,18 +190,34 @@ rowChart.width(340)
                 });
                         });
  
+other_rowChart.width(340)
+            .height(850)
+            .dimension(educationDimension)
+            .group(educationGroup)
+            .renderLabel(true)
+            .colors(["#a60000","#ff0000", "#ff4040","#ff7373","#67e667","#39e639","#00cc00"])
+            .colorDomain([0, 0])
+            .renderlet(function (chart) {
+                bubbleChart.filter(chart.filter());
+            })
+            .on("filtered", function (chart) {
+                dc.events.trigger(function () {
+                    bubbleChart.filter(chart.filter());
+                });
+                        });
+
  
 dataTable.width(800).height(800)
     .dimension(businessDimension)
-    .group(function(d) { return "List of all Selected Businesses"
+    .group(function(d) { return "List of all Selected Acquisitions"
      })
     .size(100)
     .columns([
         function(d) { return d.name; },
         function(d) { return d.city; },
         function(d) { return d.date; },
-//        function(d) { return d.review_count; },
-//        function(d) { return '<a href=\"http://maps.google.com/maps?z=12&t=m&q=loc:' + d.latitude + '+' + d.longitude +"\" target=\"_blank\">Map</a>"}
+        function(d) { return d.Categories; },
+        function(d) { return d.founder_education}
     ])
     .sortBy(function(d){ return d.date; })
     // (optional) sort order, :default ascending
