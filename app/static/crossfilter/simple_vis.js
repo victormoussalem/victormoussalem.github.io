@@ -23,7 +23,7 @@ var volumeChart = dc.barChart("#dc-volume-chart");
 var lineChart = dc.lineChart("#dc-line-chart");
 var dataTable = dc.dataTable("#dc-table-graph");
 var rowChart = dc.rowChart("#dc-row-graph");
-var other_rowChart = dc.rowChart("#dc-other-row-graph");
+var other_rowChart = dc.rowChart("#other-dc-row-graph");
  
 /********************************************************
 *                                                       *
@@ -112,12 +112,14 @@ var ndx = crossfilter(yelp_data);
             .renderLabel(true)
             .renderlet(function (chart) {
                 rowChart.filter(chart.filter());
+		other_rowChart.filter(chart.filter());
             })
             .on("postRedraw", function (chart) {
                 dc.events.trigger(function () {
                     rowChart.filter(chart.filter());
+		    other_rowChart.filter(chart.filter());
                 });
-                        });
+	                });
             ;
  
  
@@ -221,7 +223,7 @@ dataTable.width(800).height(800)
     ])
     .sortBy(function(d){ return d.date; })
     // (optional) sort order, :default ascending
-    .order(d3.ascending);
+    .order(d3.descending);
 /********************************************************
 *                                                       *
 *   Step6:  Render the Charts                           *
